@@ -3,85 +3,149 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>survey form</title>
+    <title>Survey form</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="input-warp">
-      <label for="#name">Name</label>
-      <input
-        class="input-field"
-        type="text"
-        id="name"
-        placeholder="Enter your name"
-      />
-    </div>
-    <div class="input-warp">
-      <label for="emai">Email</label>
-      <input
-        type="email"
-        class="input-field"
-        id="email"
-        placeholder="Enter your Email"
-      />
-    </div>
-    <div class="input-warp">
-      <label for="age">Age</label>
-      <input type="number" class="input-field" id="age" placeholder="Age" />
-    </div>
-    <div class="input-warp">
-      <label for="role">Your role</label>
-      <select class="input-field" name="role" id="role">
-        <option value="" disabled selected>Chose your role</option>
-        <option value="student">Student</option>
-        <option value="worker">Worker</option>
-        <option value="other">Other</option>
-      </select>
-    </div>
-    <div class="input-warp">
-      <label for="recomend">Do you recomend this survey?</label>
-      <div class="option">
-        <input type="radio" name="recomend" id="definetely" />
-        <label for="definetely">Definetely</label>
-        <br />
-        <input type="radio" name="recomend" id="maybe" />
-        <label for="maybe">Maybe</label>
-        <br />
-        <input type="radio" name="recomend" id="notsure" />
-        <label for="notsure">Not sure</label>
-      </div>
-    </div>
-    <div class="input-warp">
-      <label for="favorite"
-        >What is your favorite path
-        <span class="label-checkbox">(check all that apply)</span></label
-      >
-      <div class="option">
-        <input type="checkbox" name="favorite" id="money" />
-        <label for="money">Money</label>
-        <br />
-        <input type="checkbox" name="favorite" id="friend" />
-        <label for="friend">Friend</label>
-        <br />
-        <input type="checkbox" name="favorite" id="lover" />
-        <label for="lover">Lover</label>
-        <br />
-        <input type="checkbox" name="favorite" id="teacher" />
-        <label for="teacher">Teacher</label>
-      </div>
-    </div>
-    <div class="input-warp">
-      <label for="message">Any Message</label>
-      <textarea
-        name="message"
-        id="message"
-        cols="30"
-        rows="10"
-        placeholder="Enter your message here"
-      ></textarea>
-    </div>
-    <div class="input-warp">
-      <button type="submit">Submit</button>
+    <div class="filter-body">
+      <header>
+        <h1 id="title">Satisfiying Survey form</h1>
+        <p id="description">
+          Thank you for taking the time to help us improve the platform
+        </p>
+      </header>
+      <main>
+        <form id="survey-form">
+          <div class="input">
+            <label for="name" id="name-label">Name</label>
+            <input
+              required
+              type="text"
+              name="name"
+              placeholder="Enter your name"
+              id="name"
+            />
+          </div>
+          <div class="input">
+            <label for="email" id="email-label">Email</label>
+            <input
+              required
+              type="email"
+              placeholder="Enter your email"
+              name="email"
+              id="email"
+            />
+          </div>
+          <div class="input">
+            <label for="age" id="number-label">Age</label>
+            <input
+              min="10"
+              max="100"
+              id="number"
+              type="number"
+              name="age"
+              placeholder="Enter your age"
+              id="age"
+            />
+          </div>
+          <div class="input">
+            <label for="role"
+              >Which option best describes your current role?</label
+            >
+            <select name="role" id="dropdown">
+              <option disabled selected>Select your role</option>
+              <option value="student">Student</option>
+              <option value="teacher">Teacher</option>
+              <option value="worker">Worker</option>
+              <option value="doctor">Doctor</option>
+              <option value="businessman">Businessman</option>
+              <option value="other">other</option>
+            </select>
+          </div>
+          <div class="input">
+            <label for="recomended"
+              >Would you recomended this platform to your friends</label
+            >
+            <div class="option">
+              <input
+                type="radio"
+                name="recomended"
+                id="yes"
+                value="yes"
+              /><label for="yes">Yes</label>
+            </div>
+            <div class="option">
+              <input type="radio" name="recomended" id="no" value="no" /><label
+                for="no"
+                >No</label
+              >
+            </div>
+            <div class="option">
+              <input
+                type="radio"
+                name="recomended"
+                id="maybe"
+                value="maybe"
+              /><label for="maybe">Maybe</label>
+            </div>
+          </div>
+          <div class="input">
+            <label for="learn">What you want to learn</label>
+            <div class="option">
+              <input type="checkbox" name="learn" value="math" id="math" />
+              <label for="math">Math</label>
+            </div>
+            <div class="option">
+              <input
+                type="checkbox"
+                name="learn"
+                value="english"
+                id="english"
+              />
+              <label for="english">english</label>
+            </div>
+            <div class="option">
+              <input
+                type="checkbox"
+                name="learn"
+                value="physics"
+                id="physics"
+              />
+              <label for="physics">physics</label>
+            </div>
+            <div class="option">
+              <input
+                type="checkbox"
+                name="learn"
+                value="biology"
+                id="biologics "
+              />
+              <label for="biologics">Biologics</label>
+            </div>
+            <div class="option">
+              <input
+                type="checkbox"
+                name="learn"
+                value="technology"
+                id="technology"
+              />
+              <label for="technology">Technology</label>
+            </div>
+          </div>
+          <div class="input">
+            <label for="comment">Any sugestion for us??</label>
+            <textarea
+              name="comment"
+              id="comment"
+              cols="30"
+              rows="10"
+            ></textarea>
+          </div>
+          <div class="input">
+            <button type="submit" id="submit">Submit</button>
+          </div>
+        </form>
+      </main>
     </div>
   </body>
 </html>
