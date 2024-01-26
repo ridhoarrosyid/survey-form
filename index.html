@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>survey form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="input-warp">
+      <label for="#name">Name</label>
+      <input
+        class="input-field"
+        type="text"
+        id="name"
+        placeholder="Enter your name"
+      />
+    </div>
+    <div class="input-warp">
+      <label for="emai">Email</label>
+      <input
+        type="email"
+        class="input-field"
+        id="email"
+        placeholder="Enter your Email"
+      />
+    </div>
+    <div class="input-warp">
+      <label for="age">Age</label>
+      <input type="number" class="input-field" id="age" placeholder="Age" />
+    </div>
+    <div class="input-warp">
+      <label for="role">Your role</label>
+      <select class="input-field" name="role" id="role">
+        <option value="" disabled selected>Chose your role</option>
+        <option value="student">Student</option>
+        <option value="worker">Worker</option>
+        <option value="other">Other</option>
+      </select>
+    </div>
+    <div class="input-warp">
+      <label for="recomend">Do you recomend this survey?</label>
+      <div class="option">
+        <input type="radio" name="recomend" id="definetely" />
+        <label for="definetely">Definetely</label>
+        <br />
+        <input type="radio" name="recomend" id="maybe" />
+        <label for="maybe">Maybe</label>
+        <br />
+        <input type="radio" name="recomend" id="notsure" />
+        <label for="notsure">Not sure</label>
+      </div>
+    </div>
+    <div class="input-warp">
+      <label for="favorite"
+        >What is your favorite path
+        <span class="label-checkbox">(check all that apply)</span></label
+      >
+      <div class="option">
+        <input type="checkbox" name="favorite" id="money" />
+        <label for="money">Money</label>
+        <br />
+        <input type="checkbox" name="favorite" id="friend" />
+        <label for="friend">Friend</label>
+        <br />
+        <input type="checkbox" name="favorite" id="lover" />
+        <label for="lover">Lover</label>
+        <br />
+        <input type="checkbox" name="favorite" id="teacher" />
+        <label for="teacher">Teacher</label>
+      </div>
+    </div>
+    <div class="input-warp">
+      <label for="message">Any Message</label>
+      <textarea
+        name="message"
+        id="message"
+        cols="30"
+        rows="10"
+        placeholder="Enter your message here"
+      ></textarea>
+    </div>
+    <div class="input-warp">
+      <button type="submit">Submit</button>
+    </div>
+  </body>
+</html>
